@@ -105,6 +105,7 @@ Header
 .endorsement {
   text-align: center;
   background: var(--light-grayish-magenta);
+  box-shadow: 1px 3px 10px rgba(64, 64, 64, 0.1);
   border-radius: 8px;
   padding-top: 1rem;
   padding-bottom: 1rem;
