@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+/* font-family: 'League Spartan', sans-serif; */
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* primary colors */
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  /* neutral colors */
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: #fff;
+
+  --FF: "League Spartan", sans-serif;
+
+  --max-width: 1110px;
+
+  --transition: 0.3s ease-in-out all;
+}
+.section-center {
+  width: 87.2vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+.main {
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--FF);
+  color: var(--very-dark-magenta);
+  background: url("../images/bg-pattern-top-mobile.svg") center/cover no-repeat,
+    url("../images/bg-pattern-bottom-mobile.svg") center/cover no-repeat;
+}
+@media screen and (min-width: 768px) {
+  body {
+    background: url("../images/bg-pattern-top-desktop.svg") top left no-repeat,
+      url("../images/bg-pattern-bottom-desktop.svg") bottom right no-repeat;
+  }
+}
+/* 
+=======
+Header
+=======
+*/
+.hero-section {
+  padding-top: 82px;
+}
+.hero-center {
+  display: grid;
+  row-gap: 40px;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .hero-section {
+    padding-top: 118px;
+  }
+  .hero-center {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2.5rem;
+  }
+}
+/* hero info */
+.hero-info {
+  text-align: center;
+  max-width: 445px;
+}
+.hero-title {
+  margin: 0;
+  margin-bottom: 17px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 32px;
+  letter-spacing: -1.42857px;
+}
+.hero-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 25px;
+  letter-spacing: -0.633333px;
+  color: var(--dark-grayish-magenta);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-info {
+    text-align: left;
+  }
+  .hero-title {
+    font-size: 56px;
+    line-height: 48px;
+    letter-spacing: -2px;
+  }
+}
+
+/* endorsements */
+.endorsements {
+  display: grid;
+  row-gap: 1rem;
+}
+.endorsement {
+  text-align: center;
+  background: var(--light-grayish-magenta);
+  border-radius: 8px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.endorsement p {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+}
+@media screen and (min-width: 980px) {
+  .endorsement {
+    min-width: 445px;
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
+  .endorsement-1 {
+    justify-self: left;
+  }
+  .endorsement-2 {
+    justify-self: center;
+  }
+  .endorsement-3 {
+    justify-self: right;
+  }
+}
+
+/* 
+=======
+Reviews
+=======
+*/
+.reviews-section {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.reviews-center {
+  display: grid;
+  row-gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-section {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+  .reviews-center {
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    column-gap: 1.875rem;
+    row-gap: 1.875rem;
+  }
+}
+@media screen and (min-width: 1110px) {
+  .reviews-center {
+    height: 266px;
+    align-items: start;
+  }
+  .colton {
+    align-self: top;
+  }
+  .irene {
+    align-self: center;
+  }
+  .anne {
+    align-self: end;
+  }
+}
+.review {
+  background: var(--very-dark-magenta);
+  color: var(--white);
+  padding: 40px 32px 35px;
+  border-radius: 0.5rem;
+}
+.review-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.img-container img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.img-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.author-container {
+  font-size: 17px;
+  line-height: 16px;
+}
+.author {
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.author-status {
+  font-weight: 400;
+  color: var(--soft-pink);
+}
+/* review text */
+.review-text {
+  margin: 0;
+
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.303571px;
+}
