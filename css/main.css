@@ -207,6 +207,8 @@ Reviews
 }
 .author {
   margin: 0;
+  font-size: 17px;
+  line-height: 16px;
   font-weight: 700;
   margin-bottom: 0.25rem;
 }
